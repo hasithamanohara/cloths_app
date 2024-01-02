@@ -1,5 +1,7 @@
 import 'package:clothsapp/componant/customappbar.dart';
 import 'package:clothsapp/componant/navbardrawer.dart';
+import 'package:clothsapp/componant/searchbar.dart';
+
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -22,9 +24,7 @@ class _HomeState extends State<Home> {
           onNotificationPressed: () {},
           appBrComponantColor: Colors.black,
         ),
-        body:
-            //desrch bar
-            Container(),
+        body: const SearchBarCus(),
       ),
     );
   }
