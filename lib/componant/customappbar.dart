@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final Color appBrComponantColor;
-  final VoidCallback onMenuPressed;
+  // final VoidCallback onMenuPressed;
   final VoidCallback onNotificationPressed;
 
   const CustomAppBar({
     super.key,
     required this.title,
     required this.appBrComponantColor,
-    required this.onMenuPressed,
+    // required this.onMenuPressed,
     required this.onNotificationPressed,
   });
 
@@ -20,11 +20,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: IconButton(
-        icon: const Icon(Icons.menu),
-        color: appBrComponantColor,
-        onPressed: onMenuPressed,
-      ),
+      // leading: IconButton(
+      //   icon: const Icon(Icons.menu),
+      //   color: appBrComponantColor,
+      //   // onPressed: onMenuPressed,
+      // ),
       title: Center(
         child: Text(
           title,
