@@ -1,19 +1,40 @@
 import 'package:flutter/material.dart';
 
-class SearchBar extends StatefulWidget {
-  const SearchBar({super.key});
+class SearchBarCus extends StatefulWidget {
+  const SearchBarCus({super.key});
 
   @override
-  State<SearchBar> createState() => _SearchBarState();
+  State<SearchBarCus> createState() => _SearchBarCusState();
 }
 
-class _SearchBarState extends State<SearchBar> {
+class _SearchBarCusState extends State<SearchBarCus> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SearchAnchor(
-        builder: (BuildContext context, SearchController controller) {},
-      ),
-    );
+    return Scaffold(
+        body: ListView(
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: TextField(
+            decoration: InputDecoration(
+              contentPadding: const EdgeInsets.symmetric(vertical: 6),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: const BorderSide(width: 0.8, color: Colors.black),
+              ),
+              hintText: 'Search',
+              prefixIcon: const Icon(
+                Icons.search,
+                size: 30,
+              ),
+              // suffixIcon: IconButton(
+              //   onPressed: () {},
+              //   icon: Icon(Icons.clear),
+              // ),
+            ),
+          ),
+        ),
+      ],
+    ));
   }
 }
